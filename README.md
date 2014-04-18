@@ -3,7 +3,7 @@ nodejs-webrtc
 
 nodejs+websocket实现的webrtc视频demo，支持房间功能和刷新重新连接
 
-经测试在pc版Chrome/Firefox/Opera, Android系统的Chrome/Firefox正常，其它浏览器未测试。
+经测试在pc版Chrome/Firefox/Opera, Android系统的Chrome/Firefox正常，IOS还不支持，其它浏览器未测试。
 
 运行环境：
 
