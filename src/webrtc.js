@@ -227,6 +227,12 @@ define(function (require, exports, module) {
                     });
                 }
             };
+            pc1.oniceconnectionstatechange = function () {
+                console.log('iceConnectionState: ' + this.iceConnectionState);
+            }
+            pc1.onsignalingstatechange = function () {
+                console.log('signalingState: ' + this.signalingState);
+            }
 
             pc1.onaddstream = function (ev) {
                 attachMediaStream(vidRemote[0], ev.stream);

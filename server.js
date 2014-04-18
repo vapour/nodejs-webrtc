@@ -1,19 +1,10 @@
 var express = require('express');
 var socket = require('socket.io');
 
-
 var app = express();
-
 app.configure(function() {
-    //app.set('jsonp callback name', 'jsonp');
     app.use(express.static(__dirname));
     app.use(express.favicon());
-
-    /*
-    app.use(express.bodyParser({keepExtensions:true, uploadDir:'./upload'}));
-    app.use(express.cookieParser('_game_sodao_'));
-    app.use(express.session());
-    */
 });
 
 var io = socket.listen(app.listen(8080));
@@ -80,5 +71,3 @@ io.sockets.on('connection', function (socket) {
 
     });
 });
-
-
