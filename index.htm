@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<title>WebRTC</title>
+    <style>
+        *{margin:0;padding:0;} 
+        .video-wrapper video{
+            width:360px;
+            height:300px;
+            background:#000;
+        }
+    </style>
+	<script src="http://style.aliunicorn.com/js/6v/atom/??atom-sc.js?t=6453147c_83e654d90"></script>
+</head>
+
+<body>
+<div class="video-wrapper">
+    <video id="vidLocal" autoplay="true" muted="muted"></video>
+    <video id="vidRemote" autoplay="true" muted="muted"></video>
+</div>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script>
+    seajs.use('/src/webrtc.js', function (webrtc) {
+        webrtc.enterRoom();
+    });
+</script>
+</body>
+</html>
